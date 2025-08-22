@@ -6,7 +6,7 @@ abstract class Swimmable {
   void swim();
 }
 
-class Duck implements Flyable, Swimmable {
+class Duck extends Flyable {
   @override
   void fly() => print("Duck flies a short distance");
 
