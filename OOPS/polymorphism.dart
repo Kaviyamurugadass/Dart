@@ -13,14 +13,15 @@ class Dog implements Animal {
 }
 
 void main() {
-  Cat cat = Cat();
-  cat.makeSound(); // Output: Meow
-  Dog dog = Dog();
-  dog.makeSound(); // Output: Bark
-  Animal animal = Dog();
-  animal.makeSound(); // Output: Bark
-  // List<Animal> animals = [Cat(), Dog()];
-  // for (var animal in animals) {
-  //   animal.makeSound(); // runtime decides which method to call
-  // }
+  // Animal a = Animal(); // Error: Cannot instantiate abstract class
+  // this is upcasting
+  Animal upcast = Cat(); // Prent (Animal) reference but Child (Cat) object
+  upcast.makeSound(); // Output: Meow
+  upcast = Dog();
+  upcast.makeSound(); // Output: Bark
+
+  List<Animal> list_of_upcasting = [Cat(), Dog(), Cat()];
+  for (Animal a in list_of_upcasting) {
+    a.makeSound();
+  }
 }
