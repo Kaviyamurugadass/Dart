@@ -19,3 +19,21 @@ void main() {
   var fish = Fish();
   fish.swim();  // Can swim
 }
+
+
+
+
+// // Mixins with constraints
+// class JamesPotter {
+//   void lastname() => print("Potter");
+// }
+
+// mixin class Lilly on JamesPotter{
+//   String sameEyes(){
+//     return "blue";
+//   }
+// }
+
+// class Harry extends JamesPotter with Lilly{
+
+// }
